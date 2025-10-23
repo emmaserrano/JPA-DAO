@@ -4,9 +4,7 @@
              version="3.0"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
-    <persistence-unit name="jpa_deb" transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-
+    <persistence-unit name="jpa_db">
         <class>entities.Categoria</class>
         <class>entities.Autor</class>
         <class>entities.Libro</class>
@@ -14,9 +12,9 @@
         <properties>
             <!-- Conexión -->
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/uamdb"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bibliodb"/>
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
-            <property name="jakarta.persistence.jdbc.password" value="password"/>
+            <property name="jakarta.persistence.jdbc.password" value="emma_sql28"/>
 
             <!-- Hibernate -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
