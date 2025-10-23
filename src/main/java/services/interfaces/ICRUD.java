@@ -1,22 +1,16 @@
 package services.interfaces;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface ICRUD<T> {
+public interface ICRUD {
 
+    <T> List<T> getAll(String nameQuery, Class<T> clazz);
 
-    List<T> getAll(String nameQuery, Class<T> clazz);
+    <T> void insert(T entity);
 
+    <T> void update(T entity);
 
-    T insert(T entity);
+    <T> void delete(T entity);
 
-
-    T update(T entity);
-
-
-    void delete(T entity);
-
-
-    Optional<T> findById(Long id, Class<T> clazz);
+    <T> T findById(Integer id, Class<T> clazz);
 }
